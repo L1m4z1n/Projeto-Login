@@ -3,29 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="estilos/style.css">
+
+    <link rel="stylesheet" href="estilos/mediaquery.css">
     <title>Login</title>
 </head>
 <body>
     <main>
-        <h1>Login</h1>
-        <p>Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente</p>
-
-        <form action="" method="get" autocomplete="off">
-            <p><label for="igmail"> 
-                <input type="email" name="gmail"
-                 id="gmail" required autocomplete="email" placeholder="Seu gmail">
-                </label>
-            </p>
-            <p><label for="isenha">
-                <input type="password"
-                name="senha"
-                id="isenha" required minlength="8" maxlength="16"  placeholder="Sua senha" autocomplete="current-password">
-            </label>
-           </p>
-           <p>
-            <input type="submit" value="Enviar">
-           </p>
-        </form>
+        <section id="login">
+            <div id="imagem">
+                foto
+            </div>
+            <div id="formulario">
+                <h1>Login</h1>
+                <p>Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente</p>
+        
+                <form action="login.php" method="post" autocomplete="off">
+                    <p><label for="igmail"> 
+                        <input type="email" name="gmail"
+                         id="gmail" required autocomplete="email" placeholder="Seu gmail">
+                        </label>
+                    </p>
+                    <p><label for="isenha">
+                        <input type="password"
+                        name="senha"
+                        id="isenha" required minlength="8" maxlength="16"  placeholder="Sua senha" autocomplete="current-password">
+                    </label>
+                   </p>
+                   <p>
+                    <input type="submit" value="Enviar">
+                   </p>
+                </form>
+            </div>
+        </section>
+       
     </main>
 </body>
 </html>
