@@ -7,25 +7,27 @@
     <link rel="stylesheet" href="estilos/style.css">
 
     <link rel="stylesheet" href="estilos/mediaquery.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <title>Login</title>
 </head>
 <body>
     <main>
         <section id="login">
             <div id="imagem">
-                foto
+               <!--Aqui é a imagem-->
             </div>
             <div id="formulario">
                 <h1>Login</h1>
                 <p>Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente</p>
         
                 <form action="login.php" method="post" autocomplete="off">
-                    <p><label for="igmail"> 
+                    <p><span class="material-symbols-outlined">email</span><label for="igmail"> 
                         <input type="email" name="gmail"
                          id="gmail" required autocomplete="email" placeholder="Seu gmail">
                         </label>
                     </p>
-                    <p><label for="isenha">
+                    <p><span class="material-symbols-outlined">password</span><label for="isenha">
                         <input type="password"
                         name="senha"
                         id="isenha" required minlength="8" maxlength="16"  placeholder="Sua senha" autocomplete="current-password">
