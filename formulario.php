@@ -1,4 +1,27 @@
-@charset "UTF-8";
+<?php
+
+if(isset($_POST['submit'])){
+    print_r($_POST['gmail']);
+    print_r($_POST['senha']);
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="estilos/style.css">
+
+    <link rel="stylesheet" href="estilos/mediaquery.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Login</title>
+</head>
+<style>
+    @charset "UTF-8";
 
 /* Typical Device Breakpoints
 -------------------------------
@@ -150,51 +173,40 @@ a.botao:hover {
 
 a.botao > span {
     font-size: 0.8em;
-
-    @media screen and (min-width:768px) and (max-width:992px){
-
-        body {
-            background-image: linear-gradient(to top,#011826, #BAD0D9);
-        }
-    
-        section#login {
-            width: 80vw;
-        }
-    
-        section#login > div#imagem {
-            float: left;
-            width: 30%;
-            height: 100%;
-        }
-    
-        section#login > div#formulario {
-            float: right;
-            width: 70%;
-        }
-    }
-    
-    @media screen and (min-width:992px) {
-        section#login {
-            width: 950px;
-        }
-    
-        section#login > div#imagem {
-            float: left;
-            width: 50%;
-            height: 100%;
-        }
-    
-        section#login > div#formulario {
-            float: right;
-            width: 50%;
-        }
-    
-        div#formulario > h1 {
-            font-size: 2em;
-        }
-    
-        div#formulario > p {
-            font-size: 1.2em;
-        }
-    }
 }
+
+
+</style>
+<body>
+    <main>
+        <section id="login">
+            <div id="imagem">
+               <!--Aqui é a imagem-->
+            </div>
+            <div id="formulario">
+                <h1>Login</h1>
+                <p>Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente</p>
+        
+                <form action="formulario.php" method="post" autocomplete="off">
+                    <p><span class="material-symbols-outlined">email</span><label for="igmail"> 
+                        <input type="email" name="gmail"
+                         id="gmail" required autocomplete="email" placeholder="Seu gmail">
+                        </label>
+                    </p>
+                    <p><span class="material-symbols-outlined">password</span><label for="isenha">
+                        <input type="password"
+                        name="senha"
+                        id="isenha" required minlength="8" maxlength="16"  placeholder="Sua senha" autocomplete="current-password">
+                    </label>
+                   </p>
+                   <p>
+                    <input type="submit" value="Entrar">
+                    <a href="esqueci.html" class="botao">Esqueci a senha <span class="material-symbols-outlined">mail</span></a>
+                   </p>
+                </form>
+            </div>
+        </section>
+       
+    </main>
+</body>
+</html>
